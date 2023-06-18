@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnipCode</title>
+  <style>
+    body {
+      background-color: #05002b;
+    }
+
+    nav ul {
+      flex: 1;
+      /* margin-right: 75px; */
+    }
+
+    nav {
+      background-color: #05002b;
+      border-bottom: 1px solid white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 15px;
+      color: white;
+    }
+
+    .btn {
+      width: 120px;
+      border-radius: 20px;
+      height: 25px;
+      color: white;
+      border-color: black;
+      cursor: pointer;
+      background-color: rgb(31, 31, 231);
+    }
+
+    .under {
+      margin-top: 100px;
+      margin-left: 230px;
+      background-color: white;
+      width: 700px;
+      padding-left: 50px;
+      height: 475px;
+      padding-top: 30px;
+    }
+
+    #submit {
+      width: 150px;
+      border-radius: 20px;
+      height: 25px;
+      color: white;
+      background-color: rgb(31, 31, 231);
+      border: none;
+      cursor: pointer;
+    }
+
+    #show {
+      width: 150px;
+      border-radius: 20px;
+      height: 25px;
+      color: white;
+      background-color: rgb(31, 31, 231);
+      border: none;
+      cursor: pointer;
+    }
+
+    #show a {
+      text-decoration: none !important;
+    }
+
+    #submit1 {
+      width: 110px;
+      border-radius: 20px;
+      height: 20px;
+      color: white;
+      background-color: rgb(31, 31, 231);
+      border: none;
+      cursor: pointer;
+    }
+
+    .li5 {
+      /* float: right; */
+      /* margin-left: 250px; */
+      display: inline;
+    }
+
+    #secret,
+    #title {
+      background-color: rgb(196, 190, 190);
+      border: none;
+      outline: none;
+    }
+
+    #syntex,
+    #textarea {
+      background-color: rgb(196, 190, 190);
+    }
+
+    .search1 {
+      align-items: center;
+    }
+
+    #search {
+      border-radius: 20px;
+    }
+
+    .btn1 {
+      width: 120px;
+      border-radius: 20px;
+      height: 25px;
+      color: black;
+
+      border-color: black;
+      margin-right: 30px;
+      cursor: pointer;
+      background-color: aqua;
+    }
+
+    .li4 {
+      float: right;
+
+    }
+
+    .div10 {
+      width: 450px;
+      /* margin-left: 400px; */
+      display: inline-block;
+      text-align: right;
+      /* float: right; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <nav>
+      <ul class="ul">
+        <li class="li1">SnipCode</li>
+        <!-- <li class="li2">Home</li> -->
+        <li class="li3"><a href="/main"><button class="btn">+ New Snip</button></a></button></li>
+
+        <li class="search1">
+          <form action="/main" method="POST">
+            <input type="text" name="search" id="search" required>
+            <button type="submit" name="submit" id="submit1">Search</button>
+          </form>
+        </li>
+
+        <li class="li5">
+          <div class="div10"><b>@</b>{{session['name']}}</div>
+        </li>
+        <li class="li4"><a href="/logout"><button class="btn">Logout</button></a></li>
+
+      </ul>
+    </nav>
+  </div>
+
+  <div class="under">
+    <form action="/main" method="POST">
+      <b><label for="textarea">New Snippert</label></b><br><br>
+      <textarea name="textarea" id="textarea" cols="70" rows="15" name="textarea" required></textarea><br><br>
+      <b><label for="title">Snippet Title</label></b>
+      <input type="text" name="title" id="title" required><br><br>
+      <b><label for="secret">Secret Code</label></b>
+      <input type="text" name="secret" id="secret" required><br><br>
+
+      <b><label for="syntex">Syntex Highlighting</label></b>
+      <select name="syntex" id="syntex" name="syntex" required>
+        <option value="React">react</option>
+        <option value="PHP">php</option>
+        <option value="Javascript">Javascript</option>
+        <option value="Angular">Java</option>
+        <option value="Python">Python</option>
+
+      </select><br><br>
+      <input type="submit" name="submit" id="submit">
+      <button id="show"><a href="/show" style="color: white;">Show</a></button><br>
+
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnipCode</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .sign {
+            margin-top: -20px;
+        }
+
+        .signin {
+            margin-left: 550px;
+            /* font-weight: 100;
+        height: 20px; */
+        }
+
+        form {
+            margin-left: 540px;
+
+        }
+
+        .form1 {
+            margin-top: 30px;
+        }
+
+        input {
+            border-radius: 20px;
+            width: 250px;
+            height: 20px;
+            margin-top: -10px;
+        }
+
+        .next {
+            width: 250px;
+            border-radius: 20px;
+            height: 25px;
+            color: white;
+            background-color: rgb(31, 31, 231);
+            border: none;
+        }
+
+        .next:hover {
+            transition-duration: 0.5s;
+            background-color: rgb(5, 5, 117);
+        }
+
+        h3 {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px 15px;
+            color: white;
+        }
+
+        .li1 {
+            font-size: 25px;
+        }
+
+        nav {
+            height: 50px;
+
+        }
+
+        .under {
+            color: aliceblue;
+            margin-top: 90px;
+            position: fixed;
+        }
+
+        .darshit1 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: -1;
+            animation: DRR;
+            animation-duration: 3s;
+            /* opacity: 0.6; */
+        }
+        .first{
+        width: 230px;
+        height: 180px;
+      }
+    </style>
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename= 'bg.jpg' ) }}" alt="" class="darshit1">
+    <nav>
+        <ul class="ul">
+            <img src="{{ url_for('static', filename= 'first.png' ) }}" alt="" class="first">
+        </ul>
+
+
+    </nav>
+    <div class="under">
+        <div class="sign">
+            <h1 class="signin">Sign Up</h1>
+        </div>
+        <div class="form1">
+            <form action="/signup" method="POST">
+                <label for="name">Enter your name</label><br><br>
+                <input type="text" name="name" id="name" required><br><br>
+                <label for="email">Email Address</label><br><br>
+                <input type="email" name="email" id="email" required><br><br>
+                <!-- {% with messages = get_flashed_messages() %}  
+    {% if messages %}  
+          {% for message in messages %}  
+               <p class="eml">{{ message }}</p>  
+          {% endfor %}  
+    {% endif %}  
+ {% endwith %} <br> -->
+                <label for="mono.">Mo.Number</label><br><br>
+                <input type="number" name="mono" id="mono." onkeydown="mobileVal()" required>
+                <div id="hidmsg"></div><br>
+                <label for="password">Set Password</label><br><br>
+                <input type="password" name="password" id="password" onkeydown="passVal()" required><br><br>
+                <!-- <div id="hidpass"></div><br> -->
+                <button class="next" onclick="btn()">Sign Up</button>
+            </form>
+            
+        </div><br>
+    </div>
+    <script>
+        function mobileVal() {
+            var mobNum = document.getElementById("mono.").value;
+            var hidmsg = document.getElementById("hidmsg");
+            if (mobNum.length != 9) {
+                hidmsg.innerHTML = "minimum 10 number";
+                hidmsg.style.color = "white"
+                hidmsg.style.padding = "5px"
+            } else {
+                hidmsg.innerHTML = " ";
+            }
+        }
+        function btn(){
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mono = document.getElementById("mono.").value;
+            let password = document.getElementById("password").value;
+            let submit = document.getElementById("submit");
+
+            if(name.value != null && email.value != null && mono.value != null && password.value != null){
+            alert("Your account  has been ready");
+            }
+        }
+        // const passVal = () => {
+        //     var pass = document.getElementById("password").value;
+        //     var hidpass = document.getElementById("hidpass");
+        //     if (pass.length <= 7) {
+        //         hidpass.innerHTML = "minimum 8 charactors";
+        //         hidpass.style.color = "white"
+        //         hidpass.style.padding = "5px"
+        //     } else {
+        //         hidpass.innerHTML = " ";
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

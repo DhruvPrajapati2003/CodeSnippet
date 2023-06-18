@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnipCode</title>
+    <style>
+      .div1{
+        background-color: rgb(118, 160, 160);
+        /* width: 400px;
+        /* padding-left: 50px; */
+        /* height: 90px; */ 
+
+      }
+    </style>
+</head>
+<body>
+    {% for main1 in posts %} 
+                  <p><p><b>no:-</b>{{main1.srno}}</p></p>
+                <p><b> Snippet:-</b><pre style="color: rgb(255, 0, 0);"> {{main1.textarea}}</pre></p>
+                  <p><p><b>Title:-</b>{{main1.title}}</p></p>
+                  <p><p><b>Secret code:-</b>{{main1.secret}}</p></p>
+                <p><p> <b>Syntex:-</b> {{main1.syntex}}</p></p>
+                <td><a href="/edit/{{main1.srno}}"><button>Edit</button></a></td>
+                <td><a href="/delete/{{main1.srno}}"><button>Delete</button></a></td><br><br>
+               <b>Comment:- </b><br><textarea style="color: black;" name="txt" class="div1" id="txt" cols="50" rows="8" disabled>{{main1.Comment}}</textarea><br>
+               <a href="/delete2/{{main1.srno}}"><button>Remove</button></a><hr>
+                
+                {% endfor %}
+                <button><a href="/main">Back</a></button>
+                
+                <!-- {% for main1 in posts %}
+                <div class="under">
+                    <form action="/main1" method="POST">
+                        <p><p><b>no:-</b>{{main1.sno}}</p></p>
+                      <b><label for="textarea">New Snippert</label></b><br><br>
+                     <input type="textarea" name="textarea" id="textarea">
+                      <textarea name="textarea" id="textarea" cols="70" rows="15" name="textarea" required>{{main1.textarea}}</textarea><br><br>
+                      <b><label for="title">Snippet Title</label></b>
+                      <input type="text" name="title" id="title" required value="{{main1.title}}"><br><br>
+                      <b><label for="secret">Secret Code</label></b>
+                      <input type="text" name="secret" id="secret" required value="{{main1.secret}}"><br><br>
+                      <b><label for="syntex">Syntex Highlighting</label></b>
+                      <select name="syntex" id="syntex" name="syntex" required valuee="{{main1.syntex}}">
+                        <option value="React">react</option>
+                        <option value="PHP">php</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="Angular">Angular</option>
+                        <option value="Python">Python</option>
+                      </select><br><br>
+                      <input type="submit" name="submit" id="submit">
+                      <button id="show"><a href="/show1">Show</a></button>
+                  
+                    </form>
+                  </div>
+                  {% endfor %}  -->
+</body>
+</html>
