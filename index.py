@@ -4,7 +4,7 @@ import json
 from flask_login import LoginManager
 login_manager = LoginManager()
 
-
+        
 
 # with open('connection.json', 'r') as c:
 #     params = json.load(c)["params"]
