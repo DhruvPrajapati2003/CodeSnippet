@@ -4,12 +4,6 @@ import json
 from flask_login import LoginManager
 login_manager = LoginManager()
 
-        
-
-# with open('connection.json', 'r') as c:
-#     params = json.load(c)["params"]
-
-
 app = Flask(__name__)
 app.secret_key = 'super-secret-key'
 login_manager.init_app(app)
