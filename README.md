@@ -27,33 +27,31 @@ To get started with CodeSnippet, follow these steps:
 4. Run the `index.py` script to start the application.
 5. Access the application through your web browser.
 
-```markdown
 ## Getting Started
-To begin using CodeSnippet, follow these steps:
+To get started with CodeSnippet, follow these steps:
 
-1. **Clone the repository**: 
-   ```
-   git clone https://github.com/your-username/CodeSnippet.git
-   ```
+1. **Clone the repository** to your local machine.
+   
+    ```bash
+    git clone <repository_url>
+    ```
 
-2. **Install dependencies**: 
-   ```
-   pip install -r requirements.txt
-   ```
+2. **Install the required dependencies** using the following command:
 
-3. **Set up environment variables**: 
-   Ensure any necessary environment variables or configuration files are properly configured based on the project's requirements.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-4. **Run the application**: 
-   Execute the `index.py` script to start the application:
-   ```
-   python index.py
-   ```
+3. **Set up any necessary environment variables or configuration files** as per the project's requirements.
 
-5. **Access the application**: 
-   Once the application is running, navigate to it through your preferred web browser.
+4. **Run the application** by executing the `index.py` script:
 
-```
+    ```bash
+    python index.py
+    ```
+
+5. **Access the application** through your web browser.
+
 
 
 ## Screenshots
