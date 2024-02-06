@@ -21,19 +21,11 @@ The repository contains code and resources in various file formats:
 
 ## Getting Started
 To get started with CodeSnippet, follow these steps:
-1. Clone the repository to your local machine.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Set up any necessary environment variables or configuration files as per the project's requirements.
-4. Run the `index.py` script to start the application.
-5. Access the application through your web browser.
-
-## Getting Started
-To get started with CodeSnippet, follow these steps:
 
 1. **Clone the repository** to your local machine.
    
     ```bash
-    git clone <repository_url>
+    git clone (https://github.com/SohamPrajapati/CodeSnippet.git)
     ```
 
 2. **Install the required dependencies** using the following command:
