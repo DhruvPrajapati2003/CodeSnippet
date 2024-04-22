@@ -1,4 +1,4 @@
-# CodeSnippet
+# CodeSnippet 
 
 ## Overview
 CodeSnippet is a project designed for sharing code snippets with others and facilitating communication among users. Whether you're collaborating on a project, seeking feedback on your code, or simply looking to share knowledge, CodeSnippet provides a platform for seamless interaction.
